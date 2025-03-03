@@ -1,0 +1,29 @@
+meta {
+  name: details
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{protocol}}://{{host}}/{{version}}/account/details
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "Demo",
+    "last_name": "Customer",
+    "email": "customer@dodays.test",
+    "telephone": "01913334444",
+    "street": "1 Demo Street",
+    "town": "Demo Town",
+    "region": "Demo",
+    "postcode": "DEM0",
+    "medical": "Some medical information"
+  }
+}

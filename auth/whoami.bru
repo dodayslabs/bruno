@@ -1,0 +1,15 @@
+meta {
+  name: whoami
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/whoami
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: apply
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/coupons/apply?filter[code]=TEN&filter[class]=1
+  body: none
+  auth: bearer
+}
+
+query {
+  filter[code]: TEN
+  filter[class]: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

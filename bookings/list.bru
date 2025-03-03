@@ -1,0 +1,22 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/bookings?filter[provider]=1&filter[student]=1&filter[ended]=0&include=class,lessons.lesson
+  body: none
+  auth: bearer
+}
+
+query {
+  filter[provider]: 1
+  filter[student]: 1
+  filter[ended]: 0
+  include: class,lessons.lesson
+}
+
+auth:bearer {
+  token: {{token}}
+}

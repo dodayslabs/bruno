@@ -1,0 +1,32 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/payment-intents
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "provider_id": 1,
+    "booking_id": 1,
+    "subscription_id": 1,
+    "customer": "cus_123456",
+    "payment_method": "card",
+    "amount": 1000,
+    "force_absorb": 0,
+    "overrides": {
+        "payment_method_types": ["bacs_debit"],
+        "setup_future_usage": "off_session",
+        "capture_method": "automatic"
+    }
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("payment_intent", res.body.intent);
+}

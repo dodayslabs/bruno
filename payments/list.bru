@@ -1,0 +1,19 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/payments?filter[provider]=1
+  body: none
+  auth: bearer
+}
+
+query {
+  filter[provider]: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

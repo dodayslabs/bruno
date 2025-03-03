@@ -1,0 +1,15 @@
+meta {
+  name: stages
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/students/1/stages
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

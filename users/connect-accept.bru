@@ -1,0 +1,22 @@
+meta {
+  name: connect-accept
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/providers/1/accept
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "terms": 1,
+    "marketing": 1
+  }
+}

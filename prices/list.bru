@@ -1,0 +1,21 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/prices?filter[class]=1&filter[students][]=1&filter[students][]=2
+  body: none
+  auth: bearer
+}
+
+query {
+  filter[class]: 1
+  filter[students][]: 1
+  filter[students][]: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}

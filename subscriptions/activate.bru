@@ -1,0 +1,15 @@
+meta {
+  name: activate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/subscriptions/1/activate
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

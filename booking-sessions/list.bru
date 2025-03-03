@@ -1,0 +1,21 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/bookings-sessions?filter[provider]=1&filter[student]=1&filter[banked]=0
+  body: none
+  auth: bearer
+}
+
+query {
+  filter[provider]: 1
+  filter[student]: 1
+  filter[banked]: 0
+}
+
+auth:bearer {
+  token: {{token}}
+}

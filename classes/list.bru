@@ -1,0 +1,27 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/classes?filter[provider]=1&filter[term]=53&filter[venue]=1&filter[stage]=1&filter[age][interval]=month&filter[age][min]=0&filter[age][max]=6&filter[ability]=1&filter[activity]=1&filter[day]=2&filter[search]=demo&page=1&limit=20
+  body: none
+  auth: none
+}
+
+query {
+  filter[provider]: 1
+  filter[term]: 53
+  filter[venue]: 1
+  filter[stage]: 1
+  filter[age][interval]: month
+  filter[age][min]: 0
+  filter[age][max]: 6
+  filter[ability]: 1
+  filter[activity]: 1
+  filter[day]: 2
+  filter[search]: demo
+  page: 1
+  limit: 20
+}

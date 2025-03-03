@@ -1,0 +1,21 @@
+meta {
+  name: photo-consent
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{protocol}}://{{host}}/{{version}}/account/photo-consent
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "provider_id": 1
+  }
+}

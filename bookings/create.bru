@@ -1,0 +1,46 @@
+meta {
+  name: create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/bookings
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+    {
+        "class_id": 1,
+        "sessions": [1,2,3,4,6],
+        "students": [1,2],
+        "price_id": 1,
+        "plan_id": 1,
+        "discount_id": 1,
+        "voucher_id": 1,
+        "payment_amount": 0,
+        "credit_amount": 0,
+        "voucher_amount": 0,
+        "payment_intent": "{{payment_intent}}",
+        "payment_method": "pm_123456",
+        "save_payment_method": 1,
+        "invite_code": "INVITE123",
+        "terms": 1,
+        "loco_parentis": 1,
+        "marketing_consent": 1,
+        "photo_consent": 1,
+        "referral": {
+          "type": "wordOfMouth",
+          "name": "Demo Referral"
+        },
+        "emergency": {
+          "name": "Emergency Contact",
+          "telephone": "01913334445"
+        }
+    }
+}

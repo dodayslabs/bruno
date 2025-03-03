@@ -1,0 +1,17 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{protocol}}://{{host}}/{{version}}/waitees
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "invite_code": "INVITE123"
+  }
+}

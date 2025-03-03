@@ -1,0 +1,28 @@
+meta {
+  name: register
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "first_name": "Demo",
+    "last_name": "Customer",
+    "email": "demo@dodays.co.uk",
+    "password": "password",
+    "password_confirmation": "password",
+    "telephone": "01913334444",
+    "terms": 1,
+    "device_name": "Bruno"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("token", res.body.token);
+}

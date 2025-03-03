@@ -1,0 +1,20 @@
+meta {
+  name: show
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/metrics/billing/payments-revenue-trend?club_id=1&filter[date_range]=1 Apr 2024 - 30 Apr 2024
+  body: none
+  auth: bearer
+}
+
+query {
+  club_id: 1
+  filter[date_range]: 1 Apr 2024 - 30 Apr 2024
+}
+
+auth:bearer {
+  token: {{token}}
+}

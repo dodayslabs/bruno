@@ -1,0 +1,21 @@
+meta {
+  name: pay
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/subscriptions/1/pay
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+    {
+        "payment_intent": "{{payment_intent}}"
+    }
+}

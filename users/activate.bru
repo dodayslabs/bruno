@@ -1,0 +1,28 @@
+meta {
+  name: activate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/activate
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "terms": [
+      1,
+      1
+    ],
+    "marketing": [
+      1,
+      1
+    ]
+  }
+}

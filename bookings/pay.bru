@@ -1,0 +1,21 @@
+meta {
+  name: pay
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/bookings/ABC123/pay
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+    {
+        "payment_intent": "{{payment_intent}}"
+    }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: update
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{protocol}}://{{host}}/{{version}}/payment-intents
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "provider_id": 1,
+    "booking_id": 1,
+    "subscription_id": 1,
+    "payment_intent": "{{payment_intent}}",
+    "payment_method": "card",
+    "amount": 500,
+    "force_absorb": 0
+  }
+}

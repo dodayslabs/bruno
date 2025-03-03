@@ -1,0 +1,15 @@
+meta {
+  name: bank
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/booking-sessions/1/bank
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

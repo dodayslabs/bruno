@@ -1,0 +1,41 @@
+meta {
+  name: create-auth
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/waitees
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "provider_id": 1,
+    "students": [
+        {
+            "id": 5,
+            "stage_id": 1
+        }
+    ],
+    "venues": [
+        1
+    ],
+    "days": [
+        {
+            "day": "Monday",
+            "time": "AM"
+        },
+        {
+            "day": "Tuesday",
+            "time": null
+        }
+    ],
+    "notes": "Some notes"
+  }
+}

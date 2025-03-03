@@ -1,0 +1,44 @@
+meta {
+  name: create-guest
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/waitees
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "provider_id": 1,
+    "first_name": "Demo",
+    "last_name": "Waitee",
+    "email": "waitee@dodays.co.uk",
+    "telephone": "01913334444",
+    "students": [
+        {
+            "first_name": "Demo",
+            "last_name": "Waitee",
+            "dob": "2020-01-01",
+            "medical": "Some medical information",
+            "stage_id": 1
+        }
+    ],
+    "venues": [
+        1
+    ],
+    "days": [
+        {
+            "day": "Monday",
+            "time": "AM"
+        },
+        {
+            "day": "Tuesday",
+            "time": null
+        }
+    ],
+    "notes": "Some notes"
+  }
+}

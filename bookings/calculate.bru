@@ -1,0 +1,31 @@
+meta {
+  name: calculate
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/bookings/calculate?filter[class]=1&filter[sessions][]=1&filter[sessions][]=2&filter[sessions][]=3&filter[sessions][]=4&filter[sessions][]=5&filter[sessions][]=6&filter[students][]=1&filter[students][]=2&filter[price]=1&filter[plan]=1&filter[discount]=1&filter[voucher]=1
+  body: none
+  auth: bearer
+}
+
+query {
+  filter[class]: 1
+  filter[sessions][]: 1
+  filter[sessions][]: 2
+  filter[sessions][]: 3
+  filter[sessions][]: 4
+  filter[sessions][]: 5
+  filter[sessions][]: 6
+  filter[students][]: 1
+  filter[students][]: 2
+  filter[price]: 1
+  filter[plan]: 1
+  filter[discount]: 1
+  filter[voucher]: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

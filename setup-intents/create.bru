@@ -1,0 +1,25 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{protocol}}://{{host}}/{{version}}/setup-intents
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "provider_id": 1,
+    "customer": "cus_123456",
+    "overrides": {
+        "payment_method_types": ["bacs_debit"]
+    }
+  }
+}
