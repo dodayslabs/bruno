@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{protocol}}://{{host}}/{{version}}/providers?filter[user]=6
+  url: {{protocol}}://{{host}}/{{version}}/providers?filter[user]=3
   body: none
   auth: bearer
 }
 
-query {
-  filter[user]: 6
+params:query {
+  filter[user]: 3
 }
 
 auth:bearer {
