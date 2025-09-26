@@ -5,16 +5,16 @@ meta {
 }
 
 get {
-  url: {{protocol}}://{{host}}/{{version}}/bookings?filter[provider]=1&filter[student]=1&filter[ended]=0&include=class,lessons.lesson
+  url: {{protocol}}://{{host}}/{{version}}/bookings?filter[provider]=1&filter[student]=1&filter[ended]=0&include=class,sessions.session
   body: none
   auth: bearer
 }
 
-query {
+params:query {
   filter[provider]: 1
   filter[student]: 1
   filter[ended]: 0
-  include: class,lessons.lesson
+  include: class,sessions.session
 }
 
 auth:bearer {

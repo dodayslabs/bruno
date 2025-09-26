@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{protocol}}://{{host}}/{{version}}/metrics/billing/payments-revenue-trend?club_id=1&filter[date_range]=1 Apr 2024 - 30 Apr 2024
+  url: {{protocol}}://{{host}}/{{version}}/metrics/billing/payments-revenue-trend?provider_id=1&filter[date_range]=1 Jan 2025 - 31 Jan 2025
   body: none
   auth: bearer
 }
 
-query {
-  club_id: 1
-  filter[date_range]: 1 Apr 2024 - 30 Apr 2024
+params:query {
+  provider_id: 1
+  filter[date_range]: 1 Jan 2025 - 30 Jan 2025
 }
 
 auth:bearer {

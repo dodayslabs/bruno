@@ -4,17 +4,19 @@ meta {
   seq: 1
 }
 
-get {
-  url: {{protocol}}://{{host}}/{{version}}/coupons/apply?filter[code]=TEN&filter[class]=1
-  body: none
+post {
+  url: {{protocol}}://{{host}}/{{version}}/coupons/apply
+  body: json
   auth: bearer
-}
-
-query {
-  filter[code]: TEN
-  filter[class]: 1
 }
 
 auth:bearer {
   token: {{token}}
+}
+
+body:json {
+    {
+        "class": 1,
+        "code": "TEN"
+    }
 }
