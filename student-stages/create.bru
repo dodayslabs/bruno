@@ -1,11 +1,11 @@
 meta {
-  name: connect-accept
+  name: create
   type: http
   seq: 2
 }
 
 post {
-  url: {{protocol}}://{{host}}/{{version}}/providers/1/accept
+  url: {{protocol}}://{{host}}/{{version}}/students/1/stages
   body: json
   auth: bearer
 }
@@ -16,7 +16,7 @@ auth:bearer {
 
 body:json {
   {
-    "terms": true,
-    "marketing": true
+    "stage_id": 1,
+    "awarded_on": "2025-01-31"
   }
 }

@@ -5,13 +5,7 @@ meta {
 }
 
 delete {
-  url: {{protocol}}://{{host}}/{{version}}/waitees
-  body: json
+  url: {{protocol}}://{{host}}/{{version}}/waitees/INVITE123
+  body: none
   auth: none
-}
-
-body:json {
-  {
-    "invite_code": "INVITE123"
-  }
 }

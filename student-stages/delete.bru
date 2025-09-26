@@ -1,0 +1,15 @@
+meta {
+  name: delete
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{protocol}}://{{host}}/{{version}}/students/1/student-stages/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

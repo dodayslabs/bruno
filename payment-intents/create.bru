@@ -18,9 +18,9 @@ body:json {
     "customer": "cus_123456",
     "payment_method": "card",
     "amount": 1000,
-    "force_absorb": 0,
+    "force_absorb": false,
     "overrides": {
-        "payment_method_types": ["bacs_debit"],
+        "payment_method_types": ["card"],
         "setup_future_usage": "off_session",
         "capture_method": "automatic"
     }

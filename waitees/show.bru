@@ -5,12 +5,11 @@ meta {
 }
 
 get {
-  url: {{protocol}}://{{host}}/{{version}}/waitees?filter[invite_code]=INVITE123&filter[class]=1
+  url: {{protocol}}://{{host}}/{{version}}/waitees/INVITE123?filter[class]=1
   body: none
   auth: none
 }
 
-query {
-  filter[invite_code]: INVITE123
+params:query {
   filter[class]: 1
 }
