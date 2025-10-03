@@ -1,0 +1,23 @@
+meta {
+  name: list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}/{{version}}/discover?filter[type]=provider&filter[category]=create&filter[latitude]=54.976437&filter[longitude]=-1.607063&filter[radius]=16.09&filter[bounds][north]=55.136796999999994&filter[bounds][south]=54.816077&filter[bounds][east]=-1.4779494136293074&filter[bounds][west]=-1.7361765863706924
+  body: none
+  auth: none
+}
+
+params:query {
+  filter[type]: provider
+  filter[category]: create
+  filter[latitude]: 54.976437
+  filter[longitude]: -1.607063
+  filter[radius]: 16.09
+  filter[bounds][north]: 55.136796999999994
+  filter[bounds][south]: 54.816077
+  filter[bounds][east]: -1.4779494136293074
+  filter[bounds][west]: -1.7361765863706924
+}
