@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{protocol}}://{{host}}/{{version}}/discover?filter[type]=activity&filter[categories][]=create&filter[categories][]=explore&filter[categories][]=move&filter[categories][]=taste&filter[types][]=accessible-inclusive-places&filter[types][]=family-days-out&filter[types][]=kids-activities&filter[latitude]=54.976437&filter[longitude]=-1.607063&filter[radius]=16.09&filter[bounds][north]=55.617877&filter[bounds][south]=54.334996999999994&filter[bounds][east]=-1.0906086545172298&filter[bounds][west]=-2.12351734548277&filter[when]=this-weekend&sort=when
+  url: {{protocol}}://{{host}}/{{version}}/discover?filter[type]=activity&filter[categories][]=create&filter[categories][]=explore&filter[categories][]=move&filter[categories][]=taste&filter[types][]=accessible-inclusive-places&filter[types][]=family-days-out&filter[types][]=kids-activities&filter[latitude]=54.976437&filter[longitude]=-1.607063&filter[radius]=16.09&filter[bounds][north]=55.617877&filter[bounds][south]=54.334996999999994&filter[bounds][east]=-1.0906086545172298&filter[bounds][west]=-2.12351734548277&filter[when]=this-weekend&sort=when&page=1&limit=20
   body: none
   auth: none
 }
@@ -28,4 +28,6 @@ params:query {
   filter[bounds][west]: -2.12351734548277
   filter[when]: this-weekend
   sort: when
+  page: 1
+  limit: 20
 }

@@ -1,6 +1,6 @@
 # DoDays Bruno API Collection
 
-Bruno API collection for the DoDays platform. This repository contains all API endpoint definitions for testing and development, organized by resource type.
+Bruno API collection for the DoDays platform. This repository contains all API endpoint definitions for testing and development, organised by resource type.
 
 ## What is Bruno?
 
@@ -23,7 +23,7 @@ Bruno API collection for the DoDays platform. This repository contains all API e
 
 Choose your target environment from the environment dropdown:
 
-- **Local** - `http://api.dodays.test` (requires local API setup)
+- **Local** - `https://api.dodays.test` (requires local API setup)
 - **Staging** - `https://api.dodays-staging.co.uk`
 - **Production** - `https://api.dodays.co.uk`
 
@@ -43,7 +43,7 @@ Choose your target environment from the environment dropdown:
 
 ## Project Structure
 
-The collection is organized by API resource (not by endpoint type):
+The collection is organised by API resource (not by endpoint type):
 
 ```
 auth/              - Authentication (login, register, password reset)
@@ -66,7 +66,7 @@ environments/      - Bruno environment configurations
 
 Each environment uses these variables:
 
-- `{{protocol}}` - HTTP protocol (http/https)
+- `{{protocol}}` - HTTP protocol (https)
 - `{{host}}` - API host domain
 - `{{version}}` - API version (e.g., v1)
 - `{{token}}` - Bearer token for authentication (auto-saved after login)
