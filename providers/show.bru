@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: {{protocol}}://{{host}}/{{version}}/providers/dodays-demo
+  url: {{protocol}}://{{host}}/{{version}}/providers/dodays-demo?include=venues,voucherProducts
   body: none
   auth: none
+}
+
+params:query {
+  include: venues,voucherProducts
 }
